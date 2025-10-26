@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adivina Quién — Liga MX (Sí/No)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>⚽ Adivina Quién — Liga MX</h1>
+      <p>Responde solo con <strong>Sí</strong> o <strong>No</strong>. El sistema puede <em>aprender</em> nuevos equipos.</p>
+    </header>
+
+    <main>
+      <div id="card" class="card">
+        <div id="prompt" class="prompt">¿Listo para jugar?</div>
+        <div class="buttons">
+          <button id="btnYes" class="btn yes">Sí</button>
+          <button id="btnNo" class="btn no">No</button>
+        </div>
+        <div class="toolbar">
+          <button id="btnStart" class="btn ghost">Iniciar partida</button>
+          <button id="btnReset" class="btn ghost">Reiniciar árbol</button>
+          <button id="btnExport" class="btn ghost">Exportar</button>
+          <button id="btnImport" class="btn ghost">Importar</button>
+        </div>
+      </div>
+
+      <section class="io">
+        <h2>Exportar / Importar conocimiento</h2>
+        <p>Usa este cuadro para copiar/pegar tu base de conocimiento (JSON). Esto permite respaldar o mover el aprendizaje.</p>
+        <textarea id="ioBox" rows="8" placeholder="Pega aquí el JSON para importar o pulsa Exportar para ver tu base actual..."></textarea>
+      </section>
+    </main>
+
+    <footer>
+      <small>Hecho para prácticas académicas. Todo el conocimiento se guarda en tu navegador (localStorage).</small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
